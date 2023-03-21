@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoffeeShop</title>
+    <link rel="stylesheet" href="coffeeShop.css">
+</head>
+
+<body>
+    <div class="heading">
+        <img src="coffee_masters_logo.png" alt="coffe_masters" class="logo">
+        <h1 class="coffee-title">Coffee Masters</h1>
+    </div>
+    <div class="content">
+
+        <div class="items box">
+            <h2>ITEMS</h2>
+            <div class="item-list">
+                <p>1x</p>
+                <p class="totb"> Cappuccino</p>
+                <p class="price">$3.35</p>
+                <p class="second brow">Life Foam</p>
+            </div>
+            <hr>
+            <div class="item-list">
+                <p>1x </p>
+                <p class="totb">Cappuccino</p>
+                <p class="price">$3.85</p>
+                <p class="life brow">Life milk</p>
+                <p class="second brow">Double espresso</p>
+            </div>
+            <hr>
+            <div class="item-list">
+                <p>1x</p>
+                <p class="totb"> Croissant</p>
+                <p class="price"> $2.45</p>
+                <p class="second brow">Butter</p>
+            </div>
+        </div>
+
+        <div class="order-name box">
+            <h2>Name</h2>
+            <fieldset>
+                <legend>Name for order</legend>
+                <input type="text" name="name-for-order" class="inp">
+            </fieldset>
+        </div>
+
+        <div class="payment box">
+            <h2>PAYMENT</h2>
+            <fieldset>
+                <legend>Card number
+                </legend>
+                <input type="text" name="card-number" class="inp">
+            </fieldset>
+            <fieldset>
+                <legend>CCV number</legend>
+                <input type="text" name="CCV-num" class="inp">
+            </fieldset>
+        </div>
+    </div>
+
+    <div class="total">
+        <div class="subt mar">
+            <p>Subtotal:</p>
+            <p> $9.65</p>
+        </div>
+        <div class="subt mar">
+            <p>Tax:</p>
+            <p> $0.82</p>
+        </div>
+        <div class="subt totb mar">
+            <p>Total:</p>
+            <p> $10.47</p>
+        </div>
+        <button class="btn-order">Place order</button>
+    </div>
+</body>
+
+</html>

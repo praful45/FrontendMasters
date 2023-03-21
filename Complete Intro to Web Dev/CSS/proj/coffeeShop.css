@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #efefef;
+}
+/* header */
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(67 40 28);
+  height: 80px;
+}
+
+.coffee-title {
+  margin-left: 5px;
+  color: white;
+}
+
+.logo {
+  height: 35px;
+  width: 35px;
+}
+
+/* content */
+h2 {
+  font-weight: 200;
+  color: brown;
+}
+
+.brow {
+  color: brown;
+}
+
+.content {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  gap: 15px 30px;
+  margin: 30px;
+}
+
+.items {
+  grid-row: span 2;
+}
+
+.box {
+  background-color: #eecaa6;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+/* .order-name {
+  background-color: #eecaa6;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.payment {
+  background-color: #eecaa6;
+  padding: 10px;
+  border-radius: 15px;
+} */
+
+.total {
+  display: flex;
+  flex-direction: column;
+  align-items: space-evenly;
+  margin: 30px;
+  margin-top: 80px;
+}
+
+.mar {
+  margin-bottom: 30px;
+}
+
+.btn-order {
+  width: 100%;
+  background-color: rgb(225, 156, 109);
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+fieldset {
+  padding: 5px 20px 8px 20px;
+  border-radius: 20px;
+  color: brown;
+  border: 1px solid brown;
+}
+
+legend {
+  padding: 0 10px;
+}
+
+.inp {
+  border: none;
+  outline: none;
+  width: 100%;
+  background-color: transparent;
+  margin-right: 5px;
+}
+
+.item-list {
+  padding: 20px;
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr 2fr 1fr;
+}
+
+.second {
+  grid-column: 2;
+}
+.life {
+  grid-column: 2;
+}
+
+.price {
+  justify-self: end;
+}
+
+.subt {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.totb {
+  font-weight: bold;
+}
+
+hr {
+  border-color: rgba(165, 42, 42, 0.449);
+}

@@ -1,23 +1,27 @@
 function add(a) {
   currVal += a;
+  currOpr = null;
   return currVal;
 }
 function multiply(a) {
   currVal *= a;
+  currOpr = null;
   return currVal;
 }
 function divide(a) {
   currVal /= a;
+  currOpr = null;
   return currVal;
 }
 function subtract(a) {
   currVal -= a;
+  currOpr = null;
   return currVal;
 }
 
 //variables
 let input = "";
-let str = "";
+let str = "0";
 let currVal = 0;
 let currOpr = "";
 
@@ -65,6 +69,7 @@ function calc(e) {
         remove();
         break;
       case "=":
+        if (currOpr === null) return;
         switch (currOpr) {
           case "+":
             res = add(+str);
@@ -82,6 +87,9 @@ function calc(e) {
             res = divide(+str);
             display.innerHTML = res;
             break;
+          default:
+            currOpr = null;
+            break;
         }
         str = res.toString();
         break;
@@ -89,12 +97,16 @@ function calc(e) {
   }
   //if it is number
   else {
-    str += input;
+    if (str === "0") {
+      str = input;
+    } else {
+      str += input;
+    }
     display.innerHTML = str;
   }
   //reseting function
   function remove() {
     display.innerHTML = "0";
-    str = "";
+    str = "0";
   }
 }

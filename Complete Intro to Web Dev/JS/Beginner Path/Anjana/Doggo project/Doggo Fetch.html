@@ -208,6 +208,7 @@
             document.getElementById("image-frame").textContent = "Fetching doggo...";
 
             const doggoImgUrl = await fetchMessage(RANDOM_IMG_ENDPOINT);
+            console.log(doggoImgUrl);
             const correctBreed = getBreedFromURL(doggoImgUrl);
             const breedChoices = getMultipleChoices(3, correctBreed, BREEDS);
 
@@ -217,14 +218,8 @@
         // TODO 5
         // Asynchronously call the loadQuizData() function,
         // Then call renderQuiz() with the returned imageUrl, correctAnswer, and choices 
-        let data = await loadQuizData();
-        console.log(data);
-        renderQuiz(data[0], data[1], data[2]);
-
-
-
-
-
+        let [url, correctAns, choices] = await loadQuizData();
+        renderQuiz(url, correctAns, choices);
     </script>
 
 </body>

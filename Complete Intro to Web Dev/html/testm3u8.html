@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Play M3U8 Video</title>
+</head>
+
+<body>
+    <div>
+        <video controls id="videoPlayer">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const videoPlayer = document.getElementById('videoPlayer');
+            const videoUrl = 'https://prod-sports-south-gm.jiocinema.com/bpk-tv/M1_IPL23_Hin_HD_IDC_BTS/Fallback/M1_IPL23_Hin_HD_IDC_BTS-audio_140835_hin=140800-video=3114800-421166953.ts?token=bfee37d2dd96c334521ade22e7f8f19bbc6dc071-1684665097-1684665020'; // Replace with the actual URL of your M3U8 video file
+
+            fetch(videoUrl)
+                .then(response => response.text())
+                .then(m3u8Content => {
+                    videoPlayer.src = URL.createObjectURL(new Blob([m3u8Content], { type: 'video/MP2T' }));
+                })
+                .catch(error => {
+                    console.error('Error fetching M3U8 video:', error);
+                });
+        });
+    </script>
+</body>
+
+</html>
